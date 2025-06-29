@@ -1,4 +1,3 @@
-
 # Airbnb 2025 – Next.js Landing Page Redesign
 
 **A modern, redesigned Airbnb landing page built with Next.js.**
