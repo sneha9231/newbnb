@@ -362,7 +362,7 @@ export default function FuturisticAirbnb() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#FF5C5C] mb-6 tracking-wider">Where's Next?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#FF5C5C] mb-6 tracking-wider">Where to Next?</h2>
             <Button
               onClick={() => setShowLiveTrends(!showLiveTrends)}
               className={`${
