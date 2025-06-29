@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Search, Heart, Star, MapPin, Mic, Play, Shuffle, Eye, Zap, Sparkles } from "lucide-react"
+import { Search, Heart, Star, MapPin, Mic, Shuffle, Eye, Zap, Sparkles } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
@@ -127,10 +128,12 @@ export default function FuturisticAirbnb() {
 
                   {/* Destination Preview Popup */}
                   <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 glassmorphism border border-[#FF5C5C] rounded-xl p-4 w-64 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
-                    <img
+                    <Image
                       src={destination.video || "/placeholder.svg"}
                       alt={destination.name}
                       className="w-full h-32 object-cover rounded-lg mb-3"
+                      width={300}
+                      height={200}
                     />
                     <h3 className="text-white font-bold mb-2">{destination.name}</h3>
                     <Button className="w-full bg-[#FF5C5C] hover:bg-[#FF5C5C]/80 text-white">Dive In</Button>
@@ -265,10 +268,12 @@ export default function FuturisticAirbnb() {
                     <div
                       className={`w-full h-full bg-gradient-to-br ${category.color} rounded-3xl border-2 border-[#FF5C5C] shadow-2xl shadow-[#FF5C5C]/20 group-hover:shadow-[#FF5C5C]/40 transition-all duration-300 group-hover:border-[#FF9999] overflow-hidden`}
                     >
-                      <img
+                      <Image
                         src={category.video || "/placeholder.svg"}
                         alt={category.name}
                         className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+                        width={400}
+                        height={256}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                       <div className="absolute bottom-6 left-6 right-6">
@@ -309,10 +314,12 @@ export default function FuturisticAirbnb() {
                 }}
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img
+                  <Image
                     src={property.image || "/placeholder.svg"}
                     alt={property.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    width={400}
+                    height={256}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 
@@ -444,7 +451,7 @@ export default function FuturisticAirbnb() {
               },
             ].map((item, idx) => (
               <div key={idx} className="relative rounded-2xl overflow-hidden shadow-md bg-[#1a1a1a] card-hover">
-                <img src={item.image} alt="Inspiration" className="w-full h-64 object-cover" />
+                <Image src={item.image} alt="Inspiration" width={400} height={256} className="w-full h-64 object-cover" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4 text-center text-base font-medium">
                   {item.quote}
                 </div>
