@@ -447,7 +447,7 @@ export default function FuturisticAirbnb() {
               },
               {
                 image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80",
-                quote: "Climb mountains not so the world can see you, but so you can see the world.&apos;",
+                quote: "Climb mountains not so the world can see you, but so you can see the world.",
               },
             ].map((item, idx) => (
               <div key={idx} className="relative rounded-2xl overflow-hidden shadow-md bg-[#1a1a1a] card-hover">
